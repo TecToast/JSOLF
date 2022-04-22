@@ -1,8 +1,8 @@
 # Release history:
 
-JSON-java releases can be found by searching the Maven repository for groupId "org.json"
+JSON-java releases can be found by searching the Maven repository for groupId "org.jsolf"
 and artifactId "json". For example:
-[https://search.maven.org/search?q=g:org.json%20AND%20a:json&core=gav](https://search.maven.org/search?q=g:org.json%20AND%20a:json&core=gav)
+[https://search.maven.org/search?q=g:org.jsolf%20AND%20a:json&core=gav](https://search.maven.org/search?q=g:org.json%20AND%20a:json&core=gav)
 
 ~~~
 20220320    Wrap StackOverflow with JSONException

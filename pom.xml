@@ -107,7 +107,7 @@
                 <configuration>
                     <instructions>
                         <Export-Package>
-                            org.json
+                            org.jsolf
                         </Export-Package>
                         <Bundle-SymbolicName>${project.artifactId}</Bundle-SymbolicName>
                     </instructions>
@@ -183,7 +183,7 @@
                 <configuration>
                     <archive>
                         <manifestEntries>
-                            <Automatic-Module-Name>org.json</Automatic-Module-Name>
+                            <Automatic-Module-Name>org.jsolf</Automatic-Module-Name>
                         </manifestEntries>
                     </archive>
                 </configuration>

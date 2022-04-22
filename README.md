@@ -3,7 +3,7 @@
 <sub><sup>image credit: Ismael Pérez Ortiz</sup></sub>
 
 
-JSON in Java [package org.json]
+JSON in Java [package org.jsolf]
 ===============================
 
 [![Maven Central](https://img.shields.io/maven-central/v/org.json/json.svg)](https://mvnrepository.com/artifact/org.json/json)
@@ -38,7 +38,7 @@ Bug fixes, code improvements, and unit test coverage changes are welcome! Becaus
 
 # Build Instructions
 
-The org.json package can be built from the command line, Maven, and Gradle. The unit tests can be executed from Maven, Gradle, or individually in an IDE e.g. Eclipse.
+The org.jsolf package can be built from the command line, Maven, and Gradle. The unit tests can be executed from Maven, Gradle, or individually in an IDE e.g. Eclipse.
  
 **Building from the command line**
 
@@ -61,7 +61,7 @@ javac -cp .:json-java.jar Test.java (Unix Systems)
 *Test file contents*
 
 ````
-import org.json.JSONObject;
+import org.jsolf.JSONObject;
 public class Test {
     public static void main(String args[]){
        JSONObject jo = new JSONObject("{ \"abc\" : \"def\" }");
