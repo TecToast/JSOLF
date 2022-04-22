@@ -1,4 +1,4 @@
-package org.jsolf;
+package de.tectoast.jsolf;
 
 /*
 Copyright (c) 2002 JSON.org

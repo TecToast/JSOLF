@@ -1,4 +1,4 @@
-package org.jsolf;
+package de.tectoast.jsolf;
 
 import java.io.Closeable;
 import java.io.IOException;
@@ -1425,10 +1425,10 @@ public class JSONObject {
         return getJSONArray(key.toString());
     }
 
-    public List<String> getStringList(String key) throws org.jsolf.JSONException {
+    public List<String> getStringList(String key) throws JSONException {
         Object object = this.get(key);
-        if (object instanceof org.jsolf.JSONArray) {
-            return ((org.jsolf.JSONArray) object).toStringList();
+        if (object instanceof JSONArray) {
+            return ((JSONArray) object).toStringList();
         }
         throw wrongValueFormatException(key, "JSONArray", object, null);
     }
@@ -1437,10 +1437,10 @@ public class JSONObject {
         return this.getStringList(key.toString());
     }
 
-    public List<JSONObject> getJSONList(String key) throws org.jsolf.JSONException {
+    public List<JSONObject> getJSONList(String key) throws JSONException {
         Object object = this.get(key);
-        if (object instanceof org.jsolf.JSONArray) {
-            return ((org.jsolf.JSONArray) object).toJSONList();
+        if (object instanceof JSONArray) {
+            return ((JSONArray) object).toJSONList();
         }
         throw wrongValueFormatException(key, "JSONArray", object, null);
     }
@@ -1451,32 +1451,32 @@ public class JSONObject {
 
     public <T> List<T> getList(String key, Class<T> clazz) {
         Object object = this.get(key);
-        if (object instanceof org.jsolf.JSONArray) {
-            return ((org.jsolf.JSONArray) object).toList(clazz);
+        if (object instanceof JSONArray) {
+            return ((JSONArray) object).toList(clazz);
         }
         throw wrongValueFormatException(key, "JSONArray", object, null);
     }
 
-    public List<Long> getLongList(String key) throws org.jsolf.JSONException {
+    public List<Long> getLongList(String key) throws JSONException {
         Object object = this.get(key);
-        if (object instanceof org.jsolf.JSONArray) {
-            return ((org.jsolf.JSONArray) object).toLongList();
+        if (object instanceof JSONArray) {
+            return ((JSONArray) object).toLongList();
         }
         throw wrongValueFormatException(key, "JSONArray", object, null);
     }
 
-    public List<List<Long>> getLongListList(String key) throws org.jsolf.JSONException {
+    public List<List<Long>> getLongListList(String key) throws JSONException {
         Object object = this.get(key);
-        if (object instanceof org.jsolf.JSONArray) {
-            return ((org.jsolf.JSONArray) object).toLongListList();
+        if (object instanceof JSONArray) {
+            return ((JSONArray) object).toLongListList();
         }
         throw wrongValueFormatException(key, "JSONArray", object, null);
     }
 
-    public <T> List<List<T>> getListList(String key, Class<T> clazz) throws org.jsolf.JSONException {
+    public <T> List<List<T>> getListList(String key, Class<T> clazz) throws JSONException {
         Object object = this.get(key);
-        if (object instanceof org.jsolf.JSONArray) {
-            return ((org.jsolf.JSONArray) object).toListList(clazz);
+        if (object instanceof JSONArray) {
+            return ((JSONArray) object).toListList(clazz);
         }
         throw wrongValueFormatException(key, "JSONArray", object, null);
     }
@@ -1485,10 +1485,10 @@ public class JSONObject {
         return this.getLongList(key.toString());
     }
 
-    public List<Integer> getIntList(String key) throws org.jsolf.JSONException {
+    public List<Integer> getIntList(String key) throws JSONException {
         Object object = this.get(key);
-        if (object instanceof org.jsolf.JSONArray) {
-            return ((org.jsolf.JSONArray) object).toIntList();
+        if (object instanceof JSONArray) {
+            return ((JSONArray) object).toIntList();
         }
         throw wrongValueFormatException(key, "JSONArray", object, null);
     }

@@ -61,7 +61,7 @@ javac -cp .:json-java.jar Test.java (Unix Systems)
 *Test file contents*
 
 ````
-import org.jsolf.JSONObject;
+import JSONObject;
 public class Test {
     public static void main(String args[]){
        JSONObject jo = new JSONObject("{ \"abc\" : \"def\" }");

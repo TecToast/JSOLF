@@ -1,4 +1,4 @@
-package org.jsolf;
+package de.tectoast.jsolf;
 
 import java.io.BufferedReader;
 import java.io.IOException;
