@@ -1517,6 +1517,24 @@ public class JSONObject {
         return getJSONObject(key.toString());
     }
 
+    public JSONObject createOrGetJSON(String key) {
+        if(!has(key)) put(key, new JSONObject());
+        return getJSONObject(key);
+    }
+
+    public JSONArray createOrGetArray(String key) {
+        if(!has(key)) put(key, new JSONArray());
+        return getJSONArray(key);
+    }
+
+    public JSONObject createOrGetJSON(Number key) {
+        return createOrGetJSON(key.toString());
+    }
+
+    public JSONArray createOrGetArray(Number key) {
+        return createOrGetArray(key.toString());
+    }
+
     /**
      * Get the long value associated with a key.
      *
