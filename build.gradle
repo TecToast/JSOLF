@@ -26,7 +26,7 @@ publishing {
     publications {
         maven(MavenPublication) {
             groupId = group
-            artifactId = 'JSON-java-olf'
+            artifactId = 'jsolf'
             version = version
 
             from components.java
