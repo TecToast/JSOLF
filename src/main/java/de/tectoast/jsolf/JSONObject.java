@@ -2545,37 +2545,41 @@ public class JSONObject {
      * Warning: This method assumes that the data structure is acyclical.
      * </b>
      *
-     * @param writer       Writes the serialized JSON
-     * @param indentFactor The number of spaces to add to each level of indentation.
-     * @param indent       The indentation of the top level.
+     * @param writer
+     *            Writes the serialized JSON
+     * @param indentFactorOld
+     *            The number of spaces to add to each level of indentation.
+     * @param indentOld
+     *            The indentation of the top level.
      * @return The writer.
      * @throws JSONException if a called function has an error or a write error
-     *                       occurs
+     * occurs
      */
-    @SuppressWarnings("resource")
-    public Writer write(Writer writer, int indentFactor, int indent)
+    public Writer write(Writer writer, int indentFactorOld, int indentOld)
             throws JSONException {
         try {
             boolean needsComma = false;
             final int length = this.length();
             writer.write('{');
-
+            boolean b = !(length <= 2 && map.values().stream().allMatch(o -> !(o instanceof JSONObject) && !(o instanceof JSONArray)));
+            int indentFactor = b ? indentFactorOld : 0;
+            int indent = b ? indentOld : 1;
             if (length == 1) {
-                final Entry<String, ?> entry = this.entrySet().iterator().next();
+                final Entry<String,?> entry = this.entrySet().iterator().next();
                 final String key = entry.getKey();
                 writer.write(quote(key));
                 writer.write(':');
                 if (indentFactor > 0) {
                     writer.write(' ');
                 }
-                try {
+                try{
                     writeValue(writer, entry.getValue(), indentFactor, indent);
                 } catch (Exception e) {
                     throw new JSONException("Unable to write JSONObject value for key: " + key, e);
                 }
             } else if (length != 0) {
                 final int newIndent = indent + indentFactor;
-                for (final Entry<String, ?> entry : this.entrySet()) {
+                for (final Entry<String,?> entry : this.entrySet()) {
                     if (needsComma) {
                         writer.write(',');
                     }
